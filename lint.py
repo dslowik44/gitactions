@@ -9,6 +9,7 @@ pylint_output = StringIO()  # Custom open stream
 reporter = TextReporter(pylint_output)
 Run(["factorial.py"], reporter=reporter, exit=False)
 print(pylint_output.getvalue())  # Retrieve and print the text report
+sys.exit(1)
 
 """
 from pylint import lint  
